@@ -27,7 +27,6 @@ import java.util.Date;
 @EntityListeners(AuditingEntityListener.class)
 public class PicInfo extends BaseEntity
 {
-
     // id
     @Id
     @GeneratedValue(generator = "system-uuid")

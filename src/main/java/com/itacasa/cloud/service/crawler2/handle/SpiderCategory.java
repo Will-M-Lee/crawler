@@ -53,7 +53,6 @@ public class SpiderCategory
             String rgex     = "photos/(.*?)$";
             String category = SubUtil.sub(categoryHtml, rgex);
 
-
             spiderCategoryData.spider(category);
         }
 

@@ -9,11 +9,8 @@ import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
 import java.io.IOException;
-import java.util.Date;
 import java.util.List;
 import java.util.UUID;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
 
 /**
  * 定时任务
@@ -55,12 +52,17 @@ public class ScheduledTask
 //    {
 //        System.err.println("scheduled" + new Date());
 //        // 使用线程池提交任务
-//        ExecutorService executorService = Executors.newFixedThreadPool(2);
+//        ExecutorService executorService = Executors.newFixedThreadPool(3);
+//        for(int i=0;i<100;i++)
+//        {
 //        executorService.submit(() ->
 //                {
 //                    try
 //                    {
-//                        output();
+//
+//                            output();
+//
+//
 //                    }
 //                    catch (InterruptedException e)
 //                    {
@@ -68,14 +70,14 @@ public class ScheduledTask
 //                    }
 //                }
 //        );
+//        }
 //    }
 //
 //    public void output() throws InterruptedException
 //    {
-//        System.err.println("scheduled:" + new Date());
-//        Thread.sleep(1000 * 10);
-////        Thread.interrupted();
-////        break;
+//        System.err.println("scheduled:" +Thread.currentThread().getName()+":"+ new Date());
+//        Thread.sleep((long)( 1000 * 10*Math.random()));
+//        return;
 //    }
 
 }

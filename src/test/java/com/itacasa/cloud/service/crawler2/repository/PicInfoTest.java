@@ -54,6 +54,7 @@ public class PicInfoTest
     {
         List<PicInfo> infos = picInfoRepository.findAllByDownload(false);
         System.err.println(infos);
+        return;
     }
 
 }

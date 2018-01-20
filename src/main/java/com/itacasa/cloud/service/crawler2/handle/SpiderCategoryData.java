@@ -28,9 +28,6 @@ public class SpiderCategoryData
     @Autowired
     private CategoryRepository categoryRepository;
 
-    @Autowired
-    private PicInfoRepository picInfoRepository;
-
     // 抓取分类分页
     public void spider(String category)
     {
@@ -69,9 +66,8 @@ public class SpiderCategoryData
         }
         if (count > 5)
         {
-            Thread.interrupted();
+            return;
         }
-
 
         Integer actual = amount;
 
