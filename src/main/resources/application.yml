@@ -1,0 +1,29 @@
+spring:
+  data:
+    jpa:
+      repositories:
+        enabled: true
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/houzz_ita?characterEncoding=utf8&autoReconnect=true&useUnicode=true&useSSL=false
+    username: root
+    password: root
+    type: com.zaxxer.hikari.HikariDataSource
+    hikari:
+      auto-commit: false
+      transaction-isolation: 4
+  transaction:
+    rollback-on-commit-failure: true
+  jpa:
+      hibernate:
+        ddl-auto: update
+      show-sql: true
+
+hystrix:
+  command:
+    default:
+      execution:
+        timeout:
+          enabled: false
+server:
+  port: 11111
